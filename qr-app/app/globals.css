@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --burgundy: #632D3B;
+  --burgundy-dark: #431C26;
+  --burgundy-light: #7E3A4B;
+  --burgundy-subtle: #F4ECEF;
+  --ivory: #F7F1E9;
+  --ivory-surface: #FFFFFF;
+  --ivory-alt: #F1EAE0;
+  --charcoal: #292326;
+  --secondary: #776D6A;
+  --muted-border: #E7DED4;
+  --champagne: #C7A878;
+  --champagne-hover: #B59560;
+  --champagne-light: #F7F2E8;
+
+  --success: #0F6B50;
+  --success-bg: #E6F4EE;
+  --warning: #8A5300;
+  --warning-bg: #FFF2DB;
+  --error: #A11F15;
+  --error-bg: #FDECEA;
+  --processing: #1D47B8;
+  --processing-bg: #EAF0FD;
+}
+
+@theme {
+  --color-burgundy: #632D3B;
+  --color-burgundy-dark: #431C26;
+  --color-burgundy-light: #7E3A4B;
+  --color-burgundy-subtle: #F4ECEF;
+  --color-ivory: #F7F1E9;
+  --color-ivory-surface: #FFFFFF;
+  --color-ivory-alt: #F1EAE0;
+  --color-charcoal: #292326;
+  --color-secondary: #776D6A;
+  --color-muted-border: #E7DED4;
+  --color-champagne: #C7A878;
+  --color-champagne-hover: #B59560;
+  --color-champagne-light: #F7F2E8;
+  
+  --color-status-success: #0F6B50;
+  --color-status-success-bg: #E6F4EE;
+  --color-status-warning: #8A5300;
+  --color-status-warning-bg: #FFF2DB;
+  --color-status-error: #A11F15;
+  --color-status-error-bg: #FDECEA;
+  --color-status-info: #1D47B8;
+  --color-status-info-bg: #EAF0FD;
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--charcoal);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print CSS */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  @page {
+    margin: 10mm;
+    size: A4 portrait;
+  }
+  .page-break-after {
+    page-break-after: always;
+    break-after: page;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ivory-alt);
+}
+::-webkit-scrollbar-thumb {
+  background: #C7BDB6;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A89D96;
+}
